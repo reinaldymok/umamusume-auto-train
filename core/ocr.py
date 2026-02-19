@@ -4,7 +4,7 @@ import numpy as np
 import re
 from utils.log import debug
 
-reader = easyocr.Reader(["en"], gpu=True)
+reader = easyocr.Reader(["en"], gpu=False)
 
 def extract_text(pil_img: Image.Image, use_recognize=False, allowlist=None, threshold=None) -> str:
   img_np = np.array(pil_img)
